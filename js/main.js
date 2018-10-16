@@ -39,9 +39,10 @@ function applyFilter(filterName){
         invert()
 
     }
-    else if(filterName=="pinkparty"){
+    else if(filterName=="filterFunctionName"){
 
-        pinkparty()
+        filterFunctionName()
+      }
 
 }
 
