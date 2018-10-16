@@ -1,5 +1,4 @@
-js
-function desaturate(){
+function pinkparty(){
     push() // save current drawing settings
     loadPixels() // load all pixel data into the "pixels" array
     // loop as many times as there are pixel values in the pixels array
@@ -7,12 +6,11 @@ function desaturate(){
         let r = pixels[i] // red value
         let g = pixels[i+1] // green value
         let b = pixels[i+2] // blue value
-        let a = pixels[i+3] // alpha channel
-        let grey = (r+g+b)/3 // create grey value
-        pixels[i] = grey // re-assign red value
-        pixels[i+1] = grey // re-assign green value
-        pixels[i+2] = grey // re-assign blue value
+        pixels[i] = 255 - r // re-assign to invere of red value
+        pixels[i+1] = 255 - g // re-assign to invere of green value
+        pixels[i+2] = 255 - b // re-assign to invere of blue value
     }
+    updatePixels() // update canvas from modified "pixels" array
     updatePixels() // update canvas from modified "pixels" array
     pop() // restore original drawing settings
 }
