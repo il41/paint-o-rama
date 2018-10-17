@@ -49,6 +49,7 @@ function applyFilter(filterName){
 function preload() {
     loadStarImage()
     loadCatImages()
+    loadCowboyImages()
 }
 
 function setup(){
