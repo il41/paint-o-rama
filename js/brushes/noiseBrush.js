@@ -1,3 +1,24 @@
+var slider;
+var slider2;
+var slider3;
+var slider4;
+//slider labels
+//var labels = $('.label-section');
+var labels = document.querySelector('.label-section');
+// function that will hide sliders in setup & draw function
+function hideSliders() {
+for (var i = 0; i < slidersArray.length; i++) {
+        slidersArray[i].hide();
+    }
+}
+// function that will show sliders in draw function
+function showSliders() {
+for (var i = 0; i < slidersArray.length; i++) {
+        slidersArray[i].show();
+    }
+}
+
+
 function noiseBrush(x,y){
 
     push() // save current drawing settings
@@ -27,4 +48,31 @@ function noiseBrush(x,y){
         t += slider.value()/1000; // changes noise speed
         bezier(x1, y1, x2, y2, x3, y3, x4, y4);
     pop() // restore original drawing settings
+}
+
+function setupNoiseBrush() {
+    t=0; // noise variable for noise brush
+    //create & position sliders
+    slider = createSlider(1,15,3);
+    slider2 = createSlider(1,10,2);
+    slider3 = createSlider(0,10,5);
+    slider4 = createSlider(1,100,100);
+    slider.position(90,200);
+    slider2.position(90,240);
+    slider3.position(90,280);
+    slider4.position(90,320);
+    //create slider labels
+    slidersArray = [slider, slider2, slider3, slider4];
+    hideSliders();
+    labels.style.display = "none";
+}
+
+function toggleNoiseBrushUI(x) {
+    if (x=="noiseBrush") {
+        showSliders();
+        labels.style.display = "block";
+    } else {
+        hideSliders();
+        labels.style.display = "none";
+    }
 }

@@ -3,25 +3,6 @@
 // _.~'~._.~'~._.~'~._.~'~._.~'~._.~'~._.~'~._.~'~._.~'~._.~'~._.~'~._.~'~._.~'~
 
 let currentBrush = "basicPen" // keep track of the last selected brush
-// noise brush slider variables
-var slider;
-var slider2;
-var slider3;
-var slider4;
-//slider labels
-var labels = $('.label-section');
-// function that will hide sliders in setup & draw function
-function hideSliders() {
-for (var i = 0; i < slidersArray.length; i++) {
-        slidersArray[i].hide();
-    }
-}
-// function that will show sliders in draw function
-function showSliders() {
-for (var i = 0; i < slidersArray.length; i++) {
-        slidersArray[i].show();
-    }
-}
 
 
 
@@ -75,63 +56,41 @@ function preload() {
 
 function setup(){
     createCanvas(innerWidth,innerHeight)
-    t=0; // noise variable for noise brush
-    //create & position sliders
-    slider = createSlider(1,15,3);
-    slider2 = createSlider(1,10,2);
-    slider3 = createSlider(0,10,5);
-    slider4 = createSlider(1,100,100);
-    slider.position(90,200);
-    slider2.position(90,240);
-    slider3.position(90,280);
-    slider4.position(90,320);
-    //create slider labels
-    slidersArray = [slider, slider2, slider3, slider4];
-    hideSliders();
-    labels.hide();
-
-
-
-
+    setupNoiseBrush();
 }
 
 function draw(){
 
     if(mouseIsPressed){
 
+        toggleNoiseBrushUI(currentBrush);
+
         if(currentBrush=="basicPen"){
 
             basicPen( mouseX, mouseY )
-            hideSliders();
-            labels.hide();
+
 
         } else if(currentBrush=="rainbowPen"){
 
             rainbowPen( mouseX, mouseY )
-            hideSliders();
-            labels.hide();
+
 
 
         } else if(currentBrush=="starBrush"){
 
             starBrush( mouseX, mouseY )
-            hideSliders();
-            labels.hide();
+
 
 
         } else if(currentBrush=="catsBrush"){
 
             catsBrush( mouseX, mouseY )
-            hideSliders();
-            labels.hide();
+
 
 
         } else if(currentBrush=="noiseBrush"){
 
             noiseBrush( mouseX, mouseY )
-            showSliders();
-            labels.show();
-
 
         }
 
