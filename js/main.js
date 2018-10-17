@@ -9,10 +9,7 @@ var slider2;
 var slider3;
 var slider4;
 //slider labels
-var label1;
-var label2;
-var label3;
-var label4;
+var labels = $('.label-section');
 // function that will hide sliders in setup & draw function
 function hideSliders() {
 for (var i = 0; i < slidersArray.length; i++) {
@@ -89,14 +86,10 @@ function setup(){
     slider3.position(90,280);
     slider4.position(90,320);
     //create slider labels
-    label1 = text('speed', 240, 210);
-    label2 = text('weight', 240, 250);
-    label3 = text('alpha', 240, 290);
-    label4 = text('brightness', 240, 330);
     slidersArray = [slider, slider2, slider3, slider4];
-    labelsArray = [label1, label2, label3, label4];
     hideSliders();
-    label1.hide();
+    labels.hide();
+
 
 
 
@@ -110,29 +103,34 @@ function draw(){
 
             basicPen( mouseX, mouseY )
             hideSliders();
+            labels.hide();
 
         } else if(currentBrush=="rainbowPen"){
 
             rainbowPen( mouseX, mouseY )
             hideSliders();
+            labels.hide();
 
 
         } else if(currentBrush=="starBrush"){
 
             starBrush( mouseX, mouseY )
             hideSliders();
+            labels.hide();
 
 
         } else if(currentBrush=="catsBrush"){
 
             catsBrush( mouseX, mouseY )
             hideSliders();
+            labels.hide();
 
 
         } else if(currentBrush=="noiseBrush"){
 
             noiseBrush( mouseX, mouseY )
             showSliders();
+            labels.show();
 
 
         }
