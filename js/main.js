@@ -40,7 +40,7 @@ function applyFilter(filterName){
 
     } else if(filterName=="sonify"){
 
-        //place sonify function here
+        sonify()
 
     }
 
