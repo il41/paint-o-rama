@@ -8,6 +8,8 @@ function redblue(){
       let b = pixels[i+2] // blue value
       let a = pixels[i+3] // alpha channel
       let med = (r+g+b)/3 // create median value
+  }
+  if () {
 
   }
   updatePixels() // update canvas from modified "pixels" array
