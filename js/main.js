@@ -53,6 +53,8 @@ function preload() {
 
 function setup(){
     createCanvas(innerWidth,innerHeight)
+    noFill();
+    t=0;
 }
 
 function draw(){
@@ -61,6 +63,7 @@ function draw(){
         if(currentBrush=="basicPen"){
 
             basicPen( mouseX, mouseY )
+
 
         } else if(currentBrush=="rainbowPen"){
 
@@ -73,6 +76,10 @@ function draw(){
         } else if(currentBrush=="catsBrush"){
 
             catsBrush( mouseX, mouseY )
+
+        } else if(currentBrush=="noiseBrush"){
+
+            noiseBrush( mouseX, mouseY )
 
         }
 
