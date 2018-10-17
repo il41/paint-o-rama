@@ -15,7 +15,7 @@ function redblue(){
       pixels[i+2] = 0
   } else if ((med >= 86)&&(med <= 170)) {
       pixels[i] = 0
-      pixels[i+1] =
+      pixels[i+1] = med //re-assign green value
       pixels[i+2] = 0
   } else (){
       pixels[i] = 0
