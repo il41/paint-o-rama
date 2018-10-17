@@ -17,7 +17,7 @@ function redblue(){
       pixels[i] = 0
       pixels[i+1] = med //re-assign green value
       pixels[i+2] = 0;
-  } else (){
+  } else {
       pixels[i] = 0
       pixels[i+1] = 0
       pixels[i+2] = med; //re-assign blue value
