@@ -7,7 +7,7 @@ function redblue(){
       let g = pixels[i+1] // green value
       let b = pixels[i+2] // blue value
       let a = pixels[i+3] // alpha channel
-      let med = (r+g+b)/3 // create grey value
+      let med = (r+g+b)/3 // create median value
       pixels[i] = med // re-assign red value
       pixels[i+1] = med // re-assign green value
       pixels[i+2] = med // re-assign blue value
