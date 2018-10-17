@@ -2,7 +2,7 @@ function redblue(){
   push() // save current drawing settings
   loadPixels() // load all pixel data into the "pixels" array
   // loop as many times as there are pixel values in the pixels array
-  for( let i=0; i<pixels.length; i+=4){
+  for(let i=0; i<pixels.length; i+=4){
       let r = pixels[i] // red value
       let g = pixels[i+1] // green value
       let b = pixels[i+2] // blue value
