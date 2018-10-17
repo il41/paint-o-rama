@@ -20,7 +20,7 @@ function redblue(){
   } else (){
       pixels[i] = 0
       pixels[i+1] = 0
-      pixels[i+2] =
+      pixels[i+2] = med //re-assign blue value
   }
   updatePixels() // update canvas from modified "pixels" array
   pop() // restore original drawing settings
