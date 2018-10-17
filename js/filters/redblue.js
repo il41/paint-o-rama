@@ -25,3 +25,4 @@ function redblue(){
   updatePixels() // update canvas from modified "pixels" array
   pop() // restore original drawing settings
 }
+// some of the above code is by nbriz (desaturate filter) https://github.com/net-art-and-cultures/paint-o-rama
