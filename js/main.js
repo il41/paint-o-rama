@@ -53,10 +53,13 @@ function preload() {
 
 function setup(){
     createCanvas(innerWidth,innerHeight)
+    setupNoiseBrush();
 }
 
 function draw(){
     if(mouseIsPressed){
+
+        toggleNoiseBrushUI(currentBrush);
 
         if(currentBrush=="basicPen"){
 
@@ -73,6 +76,10 @@ function draw(){
         } else if(currentBrush=="catsBrush"){
 
             catsBrush( mouseX, mouseY )
+
+        } else if(currentBrush=="noiseBrush"){
+
+            noiseBrush( mouseX, mouseY )
 
         }
 
