@@ -12,15 +12,15 @@ function redblue(){
   if (med <= 85) {
       pixels[i] = med //re-assign red value
       pixels[i+1] = 0
-      pixels[i+2] = 0
+      pixels[i+2] = 0;
   } else if ((med >= 86)&&(med <= 170)) {
       pixels[i] = 0
       pixels[i+1] = med //re-assign green value
-      pixels[i+2] = 0
+      pixels[i+2] = 0;
   } else (){
       pixels[i] = 0
       pixels[i+1] = 0
-      pixels[i+2] = med //re-assign blue value
+      pixels[i+2] = med; //re-assign blue value
   }
   updatePixels() // update canvas from modified "pixels" array
   pop() // restore original drawing settings
