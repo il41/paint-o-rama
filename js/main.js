@@ -49,6 +49,7 @@ function applyFilter(filterName){
 function preload() {
     loadStarImage()
     loadCatImages()
+    loadMp3Sounds()
 }
 
 function setup(){
@@ -74,7 +75,11 @@ function draw(){
 
             catsBrush( mouseX, mouseY )
 
+        } else if (currentBrush=="djScrewBrush"){
+
+            djScrewBrush( mouseX, mouseY )
         }
+
 
     }
 }
