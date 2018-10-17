@@ -10,7 +10,8 @@ function loadCowboyImages(){
         'images/cowboy_5.png',
         'images/cowboy_6.png',
         'images/cowboy_7.png',
-        'images/cowboy_8.png'
+        'images/cowboy_8.png',
+        'images/cowboy_9.png'
     ]
     // loop as many times as there are paths in the array
     for (let i = 0; i < cowboyURLs.length; i++) {
