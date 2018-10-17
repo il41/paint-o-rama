@@ -75,6 +75,10 @@ function draw(){
 
             catsBrush( mouseX, mouseY )
 
+        } else if(currentBrush=="cowboyBrush"){
+
+            cowboyBrush( mouseX, mouseY )
+
         }
 
     }
