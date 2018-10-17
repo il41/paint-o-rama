@@ -38,7 +38,7 @@ function applyFilter(filterName){
 
         invert()
 
-    } else if(filterName=="redblue"){
+    } else if(filterName=="RGB"){
 
         redblue()
 
