@@ -8,7 +8,7 @@ function pinkparty(){
         let b = pixels[i+2] // blue value
         pixels[i] = 255 // keeps red value full
         pixels[i+1] = Math.floor(Math.random() * 255)// adjusts green to keep pink
-        pixels[i+2] = Math.floor(Math.random() * 255)// adjusts blue to keep pink
+        pixels[i+2] = Math.floor(Math.random() * 156 + 99)// adjusts blue to keep pink
     }
     updatePixels() // update canvas from modified "pixels" array
     updatePixels() // update canvas from modified "pixels" array
