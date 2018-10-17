@@ -9,8 +9,18 @@ function redblue(){
       let a = pixels[i+3] // alpha channel
       let med = (r+g+b)/3 // create median value
   }
-  if () {
-
+  if (med <= 85) {
+      pixels[i] =
+      pixels[i+1] =
+      pixels[i+2] =
+  } else if ((med >= 86)&&(med <= 170)) {
+      pixels[i] =
+      pixels[i+1] =
+      pixels[i+2] =
+  } else (){
+      pixels[i] =
+      pixels[i+1] =
+      pixels[i+2] = 
   }
   updatePixels() // update canvas from modified "pixels" array
   pop() // restore original drawing settings
