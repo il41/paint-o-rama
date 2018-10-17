@@ -6,9 +6,9 @@ function pinkparty(){
         let r = pixels[i] // red value
         let g = pixels[i+1] // green value
         let b = pixels[i+2] // blue value
-        pixels[i] = 255 // re-assign to invere of red value
-        pixels[i+1] = Math.floor(Math.random() * 255)// re-assign to invere of green value
-        pixels[i+2] = Math.floor(Math.random() * 255)// re-assign to invere of blue value
+        pixels[i] = 255 // keeps red value full
+        pixels[i+1] = Math.floor(Math.random() * 255)// adjusts green to keep pink
+        pixels[i+2] = Math.floor(Math.random() * 255)// adjusts blue to keep pink
     }
     updatePixels() // update canvas from modified "pixels" array
     updatePixels() // update canvas from modified "pixels" array
