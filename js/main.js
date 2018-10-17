@@ -3,7 +3,30 @@
 // _.~'~._.~'~._.~'~._.~'~._.~'~._.~'~._.~'~._.~'~._.~'~._.~'~._.~'~._.~'~._.~'~
 
 let currentBrush = "basicPen" // keep track of the last selected brush
-var slider; // creating slider variable for noise sliders
+// noise brush slider variables
+var slider;
+var slider2;
+var slider3;
+var slider4;
+//slider labels
+var label1;
+var label2;
+var label3;
+var label4;
+// function that will hide sliders in setup & draw function
+function hideSliders() {
+for (var i = 0; i < slidersArray.length; i++) {
+        slidersArray[i].hide();
+    }
+}
+// function that will show sliders in draw function
+function showSliders() {
+for (var i = 0; i < slidersArray.length; i++) {
+        slidersArray[i].show();
+    }
+}
+
+
 
 
 // create array of objects for each img element on our index.html page
@@ -55,34 +78,62 @@ function preload() {
 
 function setup(){
     createCanvas(innerWidth,innerHeight)
-    noFill(); // for noise brush. will this conflict with other people's stuff? probably, right?
     t=0; // noise variable for noise brush
-    slider = createSlider(0, 255, 0); // slider w/ range 0-255, starts at 0
+    //create & position sliders
+    slider = createSlider(1,15,3);
+    slider2 = createSlider(1,10,2);
+    slider3 = createSlider(0,10,5);
+    slider4 = createSlider(1,100,100);
+    slider.position(90,200);
+    slider2.position(90,240);
+    slider3.position(90,280);
+    slider4.position(90,320);
+    //create slider labels
+    label1 = text('speed', 240, 210);
+    label2 = text('weight', 240, 250);
+    label3 = text('alpha', 240, 290);
+    label4 = text('brightness', 240, 330);
+    slidersArray = [slider, slider2, slider3, slider4];
+    labelsArray = [label1, label2, label3, label4];
+    hideSliders();
+    label1.hide();
+
+
+
 }
 
 function draw(){
+
     if(mouseIsPressed){
 
         if(currentBrush=="basicPen"){
 
             basicPen( mouseX, mouseY )
-
+            hideSliders();
 
         } else if(currentBrush=="rainbowPen"){
 
             rainbowPen( mouseX, mouseY )
+            hideSliders();
+
 
         } else if(currentBrush=="starBrush"){
 
             starBrush( mouseX, mouseY )
+            hideSliders();
+
 
         } else if(currentBrush=="catsBrush"){
 
             catsBrush( mouseX, mouseY )
+            hideSliders();
+
 
         } else if(currentBrush=="noiseBrush"){
 
             noiseBrush( mouseX, mouseY )
+            showSliders();
+
 
         }
 
