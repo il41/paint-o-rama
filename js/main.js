@@ -42,6 +42,14 @@ function applyFilter(filterName){
 
         sonify()
 
+    }else if(filterName=="sonifygui"){
+
+        sonifygui()
+
+    }else if(filterName=="sonifydl"){
+
+        sonifydl()
+
     }
 
 }
