@@ -7,10 +7,10 @@ function redblue(){
       let g = pixels[i+1] // green value
       let b = pixels[i+2] // blue value
       let a = pixels[i+3] // alpha channel
-      let grey = (r+g+b)/3 // create grey value
-      pixels[i] = grey // re-assign red value
-      pixels[i+1] = grey // re-assign green value
-      pixels[i+2] = grey // re-assign blue value
+      let med = (r+g+b)/3 // create grey value
+      pixels[i] = med // re-assign red value
+      pixels[i+1] = med // re-assign green value
+      pixels[i+2] = med // re-assign blue value
   }
   updatePixels() // update canvas from modified "pixels" array
   pop() // restore original drawing settings
