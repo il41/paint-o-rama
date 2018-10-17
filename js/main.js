@@ -3,6 +3,8 @@
 // _.~'~._.~'~._.~'~._.~'~._.~'~._.~'~._.~'~._.~'~._.~'~._.~'~._.~'~._.~'~._.~'~
 
 let currentBrush = "basicPen" // keep track of the last selected brush
+var slider; // creating slider variable for noise sliders
+
 
 // create array of objects for each img element on our index.html page
 let imgs = document.querySelectorAll('img')
@@ -53,8 +55,9 @@ function preload() {
 
 function setup(){
     createCanvas(innerWidth,innerHeight)
-    noFill();
-    t=0;
+    noFill(); // for noise brush. will this conflict with other people's stuff? probably, right?
+    t=0; // noise variable for noise brush
+    slider = createSlider(0, 255, 0); // slider w/ range 0-255, starts at 0
 }
 
 function draw(){
