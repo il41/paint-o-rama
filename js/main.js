@@ -4,9 +4,6 @@
 
 let currentBrush = "basicPen" // keep track of the last selected brush
 
-
-
-
 // create array of objects for each img element on our index.html page
 let imgs = document.querySelectorAll('img')
 // loop as many times are there are image elements
@@ -60,7 +57,6 @@ function setup(){
 }
 
 function draw(){
-
     if(mouseIsPressed){
 
         toggleNoiseBrushUI(currentBrush);
@@ -69,24 +65,17 @@ function draw(){
 
             basicPen( mouseX, mouseY )
 
-
         } else if(currentBrush=="rainbowPen"){
 
             rainbowPen( mouseX, mouseY )
-
-
 
         } else if(currentBrush=="starBrush"){
 
             starBrush( mouseX, mouseY )
 
-
-
         } else if(currentBrush=="catsBrush"){
 
             catsBrush( mouseX, mouseY )
-
-
 
         } else if(currentBrush=="noiseBrush"){
 
