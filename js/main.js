@@ -38,6 +38,10 @@ function applyFilter(filterName){
 
         invert()
 
+    } else if(filterName=="sonify"){
+
+        //place sonify function here
+
     }
 
 }
