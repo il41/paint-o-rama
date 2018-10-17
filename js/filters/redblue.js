@@ -11,16 +11,16 @@ function redblue(){
   }
   if (med <= 85) {
       pixels[i] =
-      pixels[i+1] =
-      pixels[i+2] =
+      pixels[i+1] = 0
+      pixels[i+2] = 0
   } else if ((med >= 86)&&(med <= 170)) {
-      pixels[i] =
+      pixels[i] = 0
       pixels[i+1] =
-      pixels[i+2] =
+      pixels[i+2] = 0
   } else (){
-      pixels[i] =
-      pixels[i+1] =
-      pixels[i+2] = 
+      pixels[i] = 0
+      pixels[i+1] = 0
+      pixels[i+2] =
   }
   updatePixels() // update canvas from modified "pixels" array
   pop() // restore original drawing settings
