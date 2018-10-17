@@ -52,7 +52,8 @@ function preload() {
 }
 
 function setup(){
-    createCanvas(innerWidth,innerHeight)
+    let canvas = createCanvas(innerWidth,innerHeight)
+    eraseSetUp(canvas.drawingContext)
 }
 
 function draw(){
@@ -74,6 +75,9 @@ function draw(){
 
             catsBrush( mouseX, mouseY )
 
+        } else if(currentBrush=="erase"){
+
+            erase( mouseX , mouseY)
         }
 
     }

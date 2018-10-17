@@ -1,3 +1,16 @@
+body {
+  /* background-image: url(../images/backgroundCode.png); */
+/* google how to set background image CSS to fullWidth + fullHeight of browser window
+*/
+}
+
+
+
+
+
+
+
+
 canvas {
     position: absolute;
     top:0px;
