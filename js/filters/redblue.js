@@ -10,7 +10,7 @@ function redblue(){
       let med = (r+g+b)/3 // create median value
   }
   if (med <= 85) {
-      pixels[i] =
+      pixels[i] = med //re-assign red value
       pixels[i+1] = 0
       pixels[i+2] = 0
   } else if ((med >= 86)&&(med <= 170)) {
