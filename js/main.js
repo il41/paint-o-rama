@@ -40,18 +40,8 @@ function applyFilter(filterName){
 
     } else if(filterName=="sonify"){
 
-        sonify()
-
-    }else if(filterName=="sonifygui"){
-
-        sonifygui()
-
-    }else if(filterName=="sonifydl"){
-
-        sonifydl()
-
+        openSonify()
     }
-
 }
 
 // _.~'~._.~'~._.~'~._.~'~._.~'~._.~'~._.~'~._.~'~._.~'~._.~'~._.~'~._.~'~._.~'~

@@ -44,3 +44,14 @@ canvas {
 .filter-item:hover {
     color:#ff00ff;
 }
+
+#sonifymenu {
+  display:none;
+  width:100px;
+  height:100px;
+  background-color: #aaa;
+}
+#sonifymenu > img {
+  width: 32px;
+  cursor:pointer;
+}
