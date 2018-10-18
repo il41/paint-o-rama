@@ -74,6 +74,10 @@ function draw(){
 
             catsBrush( mouseX, mouseY )
 
+        } else if(currentBrush=="stefanPen"){
+
+            stefanPen( mouseX, mouseY )
+
         }
 
     }
