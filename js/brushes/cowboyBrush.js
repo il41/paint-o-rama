@@ -35,7 +35,7 @@ function cowboyBrush(x,y){
     ran = floor( ran ) // make sure it is not a float by rounding down
     image( cowboy[ran], x, y, 50, 50 ) // draw a random cowboy
     if (!cowboyAudio.isPlaying()){
-      
+      cowboyAudio.play(); 
     }
     pop() // restore original drawing settings
 }
