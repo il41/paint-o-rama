@@ -14,6 +14,7 @@ function loadCowboyImages(){
         'images/cowboy_8.png',
         'images/cowboy_9.png'
     ]
+    cowboyAudio = loadSound()
     // loop as many times as there are paths in the array
     for (let i = 0; i < cowboyURLs.length; i++) {
         // load the next cat image, assign it to the image variable
