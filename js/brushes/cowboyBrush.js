@@ -1,4 +1,5 @@
 let cowboy = []
+let cowboyAudio
 
 function loadCowboyImages(){
     // array with paths to the different cowboy images
