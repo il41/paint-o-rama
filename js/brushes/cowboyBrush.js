@@ -35,7 +35,7 @@ function cowboyBrush(x,y){
     ran = floor( ran ) // make sure it is not a float by rounding down
     image( cowboy[ran], x, y, 50, 50 ) // draw a random cowboy
     if (!cowboyAudio.isPlaying()){
-      cowboyAudio.play(); 
+      cowboyAudio.play(); //when the mouse is pressed while the cowboyBrush is selected, checking that: if cowboyAudio is NOT playing, play cowboyAudio
     }
     pop() // restore original drawing settings
 }
