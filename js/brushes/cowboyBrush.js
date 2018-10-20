@@ -25,7 +25,7 @@ function loadCowboyImages(){
 }
 
 function cowboyEnd(){
-    
+    cowboyAudio.stop();
 }
 //cowboyEnd commands cowboyAudio to stop
 
