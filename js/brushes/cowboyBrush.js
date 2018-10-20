@@ -25,8 +25,9 @@ function loadCowboyImages(){
 }
 
 function cowboyEnd(){
-  
+    
 }
+//cowboyEnd commands cowboyAudio to stop
 
 function cowboyBrush(x,y){
     push() // save current drawing settings
