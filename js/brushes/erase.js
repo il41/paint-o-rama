@@ -1,8 +1,11 @@
+// ~*~*~*~*~~*~*~*~*~~*~*~*~*~hi mom~*~*~*~*~~*~*~*~*~~*~*~*~*~~*~*~*~*~
+
+
 let ctx
 function erase(x,y){
     push() // save current drawing settings
     fill(100,100,20)
-    ctx.clearRect(x,y,100,100)
+    ctx.clearRect(x,y,50,50)
     pop() // restore original drawing settings
 }
 
