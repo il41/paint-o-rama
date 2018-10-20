@@ -57,6 +57,7 @@ function setup(){
 }
 
 function mouseReleased(){
+    cowboyEnd();
 }
 
 function draw(){
