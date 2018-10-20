@@ -56,6 +56,9 @@ function setup(){
     createCanvas(innerWidth,innerHeight)
 }
 
+function mouseReleased(){
+}
+
 function draw(){
     if(mouseIsPressed){
 
