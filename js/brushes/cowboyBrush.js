@@ -24,6 +24,10 @@ function loadCowboyImages(){
     }
 }
 
+function cowboyEnd(){
+  
+}
+
 function cowboyBrush(x,y){
     push() // save current drawing settings
     let ran = random( 0, cowboy.length ) // pick a random index from cowboy array
