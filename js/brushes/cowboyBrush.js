@@ -24,7 +24,7 @@ function loadCowboyImages(){
 
 function cowboyBrush(x,y){
     push() // save current drawing settings
-    let ran = random( 0, cowboy.length-1 ) // pick a random index from cowboy array
+    let ran = random( 0, cowboy.length ) // pick a random index from cowboy array
     ran = floor( ran ) // make sure it is not a float by rounding down
     image( cowboy[ran], x, y, 50, 50 ) // draw a random cowboy
     pop() // restore original drawing settings
