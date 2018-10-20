@@ -34,5 +34,8 @@ function cowboyBrush(x,y){
     let ran = random( 0, cowboy.length ) // pick a random index from cowboy array
     ran = floor( ran ) // make sure it is not a float by rounding down
     image( cowboy[ran], x, y, 50, 50 ) // draw a random cowboy
+    if (!cowboyAudio.isPlaying()){
+      
+    }
     pop() // restore original drawing settings
 }
