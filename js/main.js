@@ -57,7 +57,7 @@ function setup(){
 }
 
 function mouseReleased(){
-    cowboyEnd();
+    cowboyEnd(); //when mouse is released the audio stops playing
 }
 
 function draw(){
