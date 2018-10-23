@@ -49,6 +49,7 @@ function applyFilter(filterName){
 function preload() {
     loadStarImage()
     loadCatImages()
+    loadacidhouseImages()
 }
 
 function setup(){
@@ -74,9 +75,9 @@ function draw(){
 
             catsBrush( mouseX, mouseY )
 
-        } else if(currentBrush=="stefanPen"){
+        } else if(currentBrush=="acidhouseBrush"){
 
-            stefanPen( mouseX, mouseY )
+            acidhouseBrush( mouseX, mouseY )
 
         }
 
