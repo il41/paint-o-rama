@@ -5,11 +5,11 @@ function webcam(){
     push()
     if(!cam){
       cam = createCapture(VIDEO)
-      cam.size(innerHeight,innerWidth)
+      cam.size(800,1200)
       cam.hide()
     }
 
-    image(cam,0,0,innerHeight,innerWidth);
+    image(cam,0,0,cam.height,cam.width);
     pop()
 
 }
