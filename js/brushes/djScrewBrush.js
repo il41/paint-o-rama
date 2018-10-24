@@ -3,11 +3,11 @@ let screws = []
 function loadMp3Sounds() {
 
   let soundMp3s = [
-      'mp3s/rti.mp3',
-      'mp3s/wkup.mp3',
-      'mp3s/celine.mp3'
-    //'mp3s/syntaxerror.mov'
-    //'mp3s/undefine.mov'
+      //'mp3s/rti.mp3',
+      //'mp3s/wkup.mp3',
+      //'mp3s/celine.mp3',
+      'mp3s/syntaxerror.mov',
+      'mp3s/undefine.mov'
 
     //'mp3s/syntaxerror.mp3'
 
@@ -28,8 +28,8 @@ function loadMp3Sounds() {
 
 function djScrewBrush(x, y){
   push()
-  let ran = random(0, screws.length -1);
-  ran = floor(ran);
+  let ran = random(0, screws.length)
+  ran = floor(ran)
 
   //maybe do ellipse function or image drawing function for soundbrush idk which.
   //function myBrush( x, y, size ){
@@ -37,21 +37,25 @@ function djScrewBrush(x, y){
   let d = Date.now()
   let a = d % 100
   let c = 0
+  let s = 0.5
 
     //triangle(x1, y1, x2, y2, x3, y3)
     //ellipse( x1, y1, size )
     //ellipse( x2, y2, size )
 
 
-     ellipse(x +140,y +200, 300, 400)
+    //ellipse(x +140,y +200, 300, 400)
+
 
 
     //mouth
-      if(d % 2 == 0)
-      	c = 255 - c
-      fill(c)
+    if(d % 2 == 0){
+    	c = 255 - c
 
-    	ellipse(x + 145  ,y + 325  , 130 + a , 65 - a);
+    }
+    fill(c)
+
+  	ellipse(x + 145 * s  ,y + 325 * s  , (130 + a) * s, (65 - a) * s)
 
    // arc(50, 50, 50, 200, 0, PI/2)
    // arc(100, 50, 50, 200, PI/2, PI)
@@ -74,23 +78,29 @@ function djScrewBrush(x, y){
     //arc(xpos + 100, ypos, 50, 200, i*PI/2, (i+1)* PI/2)for(i=0; i < 4; i++){
 
     fill(255)
-    	for(i=0; i < 4; i++){
-      if(i%3 == 0)
-   			xpos = 50
-    	else
-    		xpos = 100
+  	for(i=0; i < 4; i++){
+      if(i%3 == 0){
+ 			    xpos = 50
+      } else {
+  		    xpos = 100
+      }
 
-  		if(i == 2 || i == 3)
+  		if(i == 2 || i == 3){
     		ypos = 250
-    	else
+      } else {
     		ypos = 50
+      }
+      //draws left and right icp diamonds
+ 	    arc(xpos * s + x, ypos * s + y, 50 * s, 200 * s, i*PI/2, (i+1)* PI/2)
+      arc(xpos * s + 100 * s + x, ypos *s + y, 50 * s, 200 * s, i*PI/2, (i+1)* PI/2)
 
-   	arc(xpos + x, ypos + y, 50, 200, i*PI/2, (i+1)* PI/2)
-    arc(xpos + 100 + x, ypos + y, 50, 200, i*PI/2, (i+1)* PI/2)
+
+
+    }
     screws[ran].play()
-
-
-   }
+    //pupils
+    ellipse(x + 75 * s, y + 150 * s, 30 * s, 22 * s)
+    ellipse(x + 174* s, y + 150 * s, 30 * s, 22 * s)
 
    pop()
 }
