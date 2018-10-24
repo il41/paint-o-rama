@@ -38,7 +38,16 @@ function applyFilter(filterName){
 
         invert()
 
+    } else if(filterName=="webcam"){
+
+        webcam()
+
     }
+    else if(filterName=="pinkparty"){
+
+        pinkparty()
+
+      }
 
 }
 
@@ -49,15 +58,25 @@ function applyFilter(filterName){
 function preload() {
     loadStarImage()
     loadCatImages()
+    loadMp3Sounds()
+    loadCowboyImages()
     loadacidhouseImages()
 }
 
 function setup(){
-    createCanvas(innerWidth,innerHeight)
+    let canvas = createCanvas(innerWidth,innerHeight)
+    eraseSetUp(canvas.drawingContext)
+    setupNoiseBrush();
+}
+
+function mouseReleased(){
+    cowboyEnd(); //when mouse is released the audio stops playing
 }
 
 function draw(){
     if(mouseIsPressed){
+
+        toggleNoiseBrushUI(currentBrush);
 
         if(currentBrush=="basicPen"){
 
@@ -75,11 +94,26 @@ function draw(){
 
             catsBrush( mouseX, mouseY )
 
+        } else if(currentBrush=="cowboyBrush"){
+
+            cowboyBrush( mouseX, mouseY )
+
+        } else if(currentBrush=="noiseBrush"){
+
+            noiseBrush( mouseX, mouseY )
+
+        } else if(currentBrush=="erase"){
+
+            erase( mouseX , mouseY)
+
+        } else if (currentBrush=="djScrewBrush"){
+
+            djScrewBrush( mouseX, mouseY )
+
         } else if(currentBrush=="acidhouseBrush"){
 
             acidhouseBrush( mouseX, mouseY )
 
         }
-
     }
 }
