@@ -38,7 +38,16 @@ function applyFilter(filterName){
 
         invert()
 
+    } else if(filterName=="webcam"){
+
+        webcam()
+
     }
+    else if(filterName=="pinkparty"){
+
+        pinkparty()
+
+      }
 
 }
 
@@ -49,15 +58,28 @@ function applyFilter(filterName){
 function preload() {
     loadStarImage()
     loadCatImages()
+<<<<<<< HEAD
     loadacidhouseImages()
+=======
+    loadMp3Sounds()
+    loadCowboyImages()
+>>>>>>> 8643d439c2b33d88277ceb6b8989e56577aa95ec
 }
 
 function setup(){
-    createCanvas(innerWidth,innerHeight)
+    let canvas = createCanvas(innerWidth,innerHeight)
+    eraseSetUp(canvas.drawingContext)
+    setupNoiseBrush();
+}
+
+function mouseReleased(){
+    cowboyEnd(); //when mouse is released the audio stops playing
 }
 
 function draw(){
     if(mouseIsPressed){
+
+        toggleNoiseBrushUI(currentBrush);
 
         if(currentBrush=="basicPen"){
 
@@ -75,11 +97,33 @@ function draw(){
 
             catsBrush( mouseX, mouseY )
 
+<<<<<<< HEAD
         } else if(currentBrush=="acidhouseBrush"){
 
             acidhouseBrush( mouseX, mouseY )
 
         }
+=======
+        } else if(currentBrush=="cowboyBrush"){
+>>>>>>> 8643d439c2b33d88277ceb6b8989e56577aa95ec
 
+            cowboyBrush( mouseX, mouseY )
+
+        } else if(currentBrush=="noiseBrush"){
+
+            noiseBrush( mouseX, mouseY )
+
+        } else if(currentBrush=="erase"){
+
+            erase( mouseX , mouseY)
+
+        } else if (currentBrush=="djScrewBrush"){
+
+            djScrewBrush( mouseX, mouseY )
+            
+        } else if(currentBrush=="erase"){
+
+            erase( mouseX , mouseY)
+        }
     }
 }
