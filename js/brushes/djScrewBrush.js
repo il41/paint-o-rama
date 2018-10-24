@@ -1,12 +1,14 @@
 let screws = []
 
-
 function loadMp3Sounds() {
 
   let soundMp3s = [
-    'mp3s/faneto.m4a',
-    'mp3s/returntoinnocence.m4a',
-    'mp3s/tilltheworldends.m4a'
+  
+    'mp3s/syntaxerror.mov'
+    //'mp3s/undefine.mov'
+
+    //'mp3s/syntaxerror.mp3'
+
   ]
     //how do i call the mp3 files in an array? also want to add ellipse function
     //...after the array so it draws while cycling through sound files
@@ -34,25 +36,26 @@ function djScrewBrush(x, y){
   let a = d % 100
   let c = 0
 
- //   let x1 = sin(d*0.005) * (size/2) + x
-  //  let x2 = sin(d*0.005-HALF_PI) * (size/2) + x
-   // let y1 = cos(d*0.005) * (size/2) + y
-   // let y2 = cos(d*0.005-HALF_PI) * (size/2) + y
+    //triangle(x1, y1, x2, y2, x3, y3)
     //ellipse( x1, y1, size )
     //ellipse( x2, y2, size )
 
-     ellipse(x,y, 500, 500)
+
+     ellipse(x +140,y +200, 300, 400)
+
 
     //mouth
       if(d % 2 == 0)
       	c = 255 - c
       fill(c)
-    	ellipse(x + 150  ,y + 325  , 200 + a , 100 - a);
+
+    	ellipse(x + 145  ,y + 325  , 130 + a , 65 - a);
 
    // arc(50, 50, 50, 200, 0, PI/2)
    // arc(100, 50, 50, 200, PI/2, PI)
     //arc(100, 250, 50, 200, PI, PI * 3/2)
     //arc(50, 250, 50, 200, PI * 3/2, 2 * PI)
+    // or we could just have a function that takes i as a variable that outputs these 				     values...
 
    //for(i=0; i < 4; i++){
     //	if(i%3 == 0)
