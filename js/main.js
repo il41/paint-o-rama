@@ -39,6 +39,11 @@ function applyFilter(filterName){
         invert()
 
     }
+    else if(filterName=="pinkparty"){
+
+        pinkparty()
+
+      }
 
 }
 
@@ -50,14 +55,22 @@ function preload() {
     loadStarImage()
     loadCatImages()
     loadMp3Sounds()
+    loadCowboyImages()
 }
 
 function setup(){
     createCanvas(innerWidth,innerHeight)
+    setupNoiseBrush();
+}
+
+function mouseReleased(){
+    cowboyEnd(); //when mouse is released the audio stops playing
 }
 
 function draw(){
     if(mouseIsPressed){
+
+        toggleNoiseBrushUI(currentBrush);
 
         if(currentBrush=="basicPen"){
 
@@ -75,10 +88,19 @@ function draw(){
 
             catsBrush( mouseX, mouseY )
 
+        } else if(currentBrush=="cowboyBrush"){
+
+            cowboyBrush( mouseX, mouseY )
+
+        } else if(currentBrush=="noiseBrush"){
+
+            noiseBrush( mouseX, mouseY )
+
         } else if (currentBrush=="djScrewBrush"){
 
             djScrewBrush( mouseX, mouseY )
         }
+
 
 
     }
