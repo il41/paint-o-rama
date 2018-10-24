@@ -3,13 +3,13 @@ let screws = []
 function loadMp3Sounds() {
 
   let soundMp3s = [
-      'mp3s/rti.mp3',
-      'mp3s/wkup.mp3',
-      'mp3s/celine.mp3'
+      //'mp3s/rti.mp3',
+      //'mp3s/wkup.mp3',
+      //'mp3s/celine.mp3'
     //'mp3s/syntaxerror.mov'
     //'mp3s/undefine.mov'
 
-    //'mp3s/syntaxerror.mp3'
+    'mp3s/syntaxerror.mp3'
 
   ]
     //how do i call the mp3 files in an array? also want to add ellipse function
@@ -20,7 +20,7 @@ function loadMp3Sounds() {
       let mp3 = loadSound(soundMp3s[i])
       // add sound data to the sounds array
       screws.push( mp3 )
-      //what is the push function doing here? (copied from your catsBrush)
+      //what is the push function doing here?
 
   }
 
