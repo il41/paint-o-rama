@@ -48,3 +48,14 @@ canvas {
 .filter-item:hover {
     color:#ff00ff;
 }
+
+/* labels for noise brush sliders */
+.label-section {
+    position:absolute;
+    left:245px;
+    top:183px;
+}
+
+.slider-label {
+    padding-bottom:6px;
+}
