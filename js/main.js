@@ -99,9 +99,9 @@ function draw(){
         } else if (currentBrush=="djScrewBrush"){
 
             djScrewBrush( mouseX, mouseY )
+        } else if(currentBrush=="erase"){
+
+            erase( mouseX , mouseY)
         }
-
-
-
     }
 }
