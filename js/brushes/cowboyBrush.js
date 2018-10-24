@@ -4,14 +4,12 @@ let cowboyAudio
 function loadCowboyImages(){
     // array with paths to the different cowboy images
     let cowboyURLs = [
-        'images/cowboy_1.png',
-        'images/cowboy_2.png',
-        'images/cowboy_3.png',
-        'images/cowboy_4.png',
-        'images/cowboy_5.png',
-        'images/cowboy_6.png',
-        'images/cowboy_7.png',
-        'images/cowboy_8.png',
+        'images/cowboy_01.png',
+        'images/cowboy_02.png',
+        'images/cowboy_03.png',
+        'images/cowboy_04.png',
+        'images/cowboy_05.png',
+        'images/cowboy_06.png',
         'images/cowboy_9.png'
     ]
     cowboyAudio = loadSound("audio/cowboyaudio.mp3")
