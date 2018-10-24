@@ -58,12 +58,9 @@ function applyFilter(filterName){
 function preload() {
     loadStarImage()
     loadCatImages()
-<<<<<<< HEAD
-    loadacidhouseImages()
-=======
     loadMp3Sounds()
     loadCowboyImages()
->>>>>>> 8643d439c2b33d88277ceb6b8989e56577aa95ec
+    loadacidhouseImages()
 }
 
 function setup(){
@@ -97,15 +94,7 @@ function draw(){
 
             catsBrush( mouseX, mouseY )
 
-<<<<<<< HEAD
-        } else if(currentBrush=="acidhouseBrush"){
-
-            acidhouseBrush( mouseX, mouseY )
-
-        }
-=======
         } else if(currentBrush=="cowboyBrush"){
->>>>>>> 8643d439c2b33d88277ceb6b8989e56577aa95ec
 
             cowboyBrush( mouseX, mouseY )
 
@@ -120,10 +109,11 @@ function draw(){
         } else if (currentBrush=="djScrewBrush"){
 
             djScrewBrush( mouseX, mouseY )
-            
-        } else if(currentBrush=="erase"){
 
-            erase( mouseX , mouseY)
+        } else if(currentBrush=="acidhouseBrush"){
+
+            acidhouseBrush( mouseX, mouseY )
+
         }
     }
 }
