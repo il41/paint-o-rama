@@ -46,12 +46,22 @@ canvas {
 }
 
 #sonifymenu {
+  border: 3px solid #000;
   display:none;
-  width:100px;
-  height:100px;
-  background-color: #aaa;
+  width:70px;
+  height:105px;
+  background-color: #cef;
+  border-radius: 15px;
+  padding: 5px;
+  margin: 10px;
+
 }
 #sonifymenu > img {
   width: 32px;
   cursor:pointer;
+}
+#sonifyslider {
+    width: 50%; /* Width of the outside container */
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
 }

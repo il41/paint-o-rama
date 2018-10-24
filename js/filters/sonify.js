@@ -1,4 +1,17 @@
+let length = 30
+let lengthcap = false
+let sonifyloop = false
+
+
 let sonifyAlgo = "guitar"
+let slider = document.getElementById("pitchRange");
+let slideroutput = document.getElementById("sonifymenu");
+let pitch = 1; // initialize pitch value
+slider.oninput = function() {
+  pitch = this.value;
+  return pitch;
+}
+
 
 function openSonify(){
   let menu = document.querySelector("#sonifymenu")
@@ -17,21 +30,32 @@ document.querySelector("#algo2").addEventListener("click",function(){
   sonifyAlgo = "long"
 })
 
+ document.querySelector("#algo3").addEventListener("click",function(){
+   sonifyAlgo = "sunset"
+})
+
 document.querySelector("#sonifyplay").addEventListener("click",function(){
   sonify()
 })
+
+// document.querySelector("#sonifystop").addEventListener("click",function(){
+//   console.log("hello")
+// })
 
 function sonify()
 {
   loadPixels()
   const actx = new (window.AudioContext || window.webkitAudioContext)()
   let buffer = actx.createBuffer(2, pixels.length, actx.sampleRate)
-  for (let ch=0; ch<buffer.numberOfChannels; ch++) {
+  for (let ch=0; ch<buffer.numberOfChannels; ch++)
+  {
     let samples = buffer.getChannelData(ch)
       if(sonifyAlgo == "guitar"){
         guitar(samples,pixels)
       } else if(sonifyAlgo == "long"){
         long(samples,pixels)
+      } else if(sonifyAlgo == "sunset"){
+         sunset(samples,pixels)
       }
   }
   // so now that we've created a buffer && filled it w/random values, we can play it, just like before we need an audio source node, this time we'll create an AudioBufferSourceNode
@@ -40,10 +64,25 @@ function sonify()
   noise.buffer = buffer
   // then just like before we need to connect it to it's destination
   noise.connect(actx.destination)
-  // && lastly we start playing the sound (should only last 2 seconds, the length of our buffer)
-  noise.start()
+  // && lastly we start playing the sound
+  if(sonifyloop==true)
+  {
+    noise.loop=true
+  } else {
+    noise.loop=false
+  }
 
-}
+  noise.start()
+  noise.playbackRate.value=pitch
+  // here is to determine the sound's length based on user input
+  if(lengthcap=true){
+    if(pitch<1)
+    {
+      noise.stop(actx.currentTime + length);
+    }
+  }
+
+  }
 
 function guitar(samples,pixels){
   for (let s=0; s<samples.length; s++) {
@@ -59,4 +98,23 @@ function long(samples,pixels){
     //samples[s] = pixels[s*4]/255-1
     //samples[s] = (pixels[s*8]*pixels[(s+4)*8])/255-1
   }
+}
+
+function sunset(samples,pixels){
+  for (let s=0; s<width; s++) {
+        samples[s] = pixels[s*10]
+    }
+    //samples[s] = map(pixels[s],0,255,-1,1)
+    //samples[s] = pixels[s*4]/255-1
+    //samples[s] = (pixels[s*8]*pixels[(s+4)*8])/255-1
+  }
+
+function sunset(samples,pixels){
+  for (let s=0; s<width; s++)
+  {
+        samples[s] = pixels[s*10]
+  }
+      //samples[s] = map(pixels[s],0,255,-1,1)
+      //samples[s] = pixels[s*4]/255-1
+      //samples[s] = (pixels[s*8]*pixels[(s+4)*8])/255-1
 }
