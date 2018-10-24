@@ -88,11 +88,6 @@ function draw(){
 
             catsBrush( mouseX, mouseY )
 
-<<<<<<< HEAD
-        } else if(currentBrush=="erase"){
-
-            erase( mouseX , mouseY)
-=======
         } else if(currentBrush=="cowboyBrush"){
 
             cowboyBrush( mouseX, mouseY )
@@ -100,8 +95,9 @@ function draw(){
         } else if(currentBrush=="noiseBrush"){
 
             noiseBrush( mouseX, mouseY )
->>>>>>> 4012df2b71e6c1926712c9de322aaa023d5ced49
-        }
+        } else if(currentBrush=="erase"){
 
+            erase( mouseX , mouseY)
+        }
     }
 }

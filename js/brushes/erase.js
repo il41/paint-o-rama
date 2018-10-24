@@ -17,7 +17,7 @@ function eraseSetUp(drawingContext){  // creates a new function called eraseSetU
     fill(255,255,255)  //sets the primary background color to white
     noStroke()  //removes border color around white background
     rect(0,0,width, height)  //sets dimensions of white background  to the browser width and height
-    document.body.style.backgroundImage="url(/images/backgroundCodeMidterm.png)"     //calls the backgroundImage (screenshot of   this code!)
+    document.body.style.backgroundImage="url(images/backgroundCodeMidterm.png)"     //calls the backgroundImage (screenshot of   this code!)
     pop() // restore original drawing settings
 
 }
