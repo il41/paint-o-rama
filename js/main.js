@@ -38,6 +38,11 @@ function applyFilter(filterName){
 
         invert()
 
+    }
+    else if(filterName=="pinkparty"){
+
+        pinkparty()
+
       }
 
 }
@@ -54,6 +59,7 @@ function preload() {
 
 function setup(){
     createCanvas(innerWidth,innerHeight)
+    setupNoiseBrush();
 }
 
 function mouseReleased(){
@@ -62,6 +68,8 @@ function mouseReleased(){
 
 function draw(){
     if(mouseIsPressed){
+
+        toggleNoiseBrushUI(currentBrush);
 
         if(currentBrush=="basicPen"){
 
@@ -83,6 +91,9 @@ function draw(){
 
             cowboyBrush( mouseX, mouseY )
 
+        } else if(currentBrush=="noiseBrush"){
+
+            noiseBrush( mouseX, mouseY )
         }
 
     }
