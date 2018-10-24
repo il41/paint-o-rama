@@ -9,7 +9,7 @@ function webcam(){
       cam.hide()
     }
 
-    image(cam,0,0,cam.height,cam.width);
+    image(cam,0,0,cam.height,cam.width)
     pop()
 
 }
