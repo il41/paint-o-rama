@@ -62,7 +62,8 @@ function preload() {
 }
 
 function setup(){
-    createCanvas(innerWidth,innerHeight)
+    let canvas = createCanvas(innerWidth,innerHeight)
+    eraseSetUp(canvas.drawingContext)
     setupNoiseBrush();
 }
 
@@ -98,7 +99,9 @@ function draw(){
         } else if(currentBrush=="noiseBrush"){
 
             noiseBrush( mouseX, mouseY )
-        }
+        } else if(currentBrush=="erase"){
 
+            erase( mouseX , mouseY)
+        }
     }
 }
