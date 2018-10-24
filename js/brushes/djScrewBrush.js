@@ -3,8 +3,10 @@ let screws = []
 function loadMp3Sounds() {
 
   let soundMp3s = [
-  
-    'mp3s/syntaxerror.mov'
+      'mp3s/rti.mp3',
+      'mp3s/wkup.mp3',
+      'mp3s/celine.mp3'
+    //'mp3s/syntaxerror.mov'
     //'mp3s/undefine.mov'
 
     //'mp3s/syntaxerror.mp3'
