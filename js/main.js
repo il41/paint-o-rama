@@ -38,6 +38,10 @@ function applyFilter(filterName){
 
         invert()
 
+    } else if(filterName=="webcam"){
+
+        webcam()
+
     }
     else if(filterName=="pinkparty"){
 
@@ -59,7 +63,8 @@ function preload() {
 }
 
 function setup(){
-    createCanvas(innerWidth,innerHeight)
+    let canvas = createCanvas(innerWidth,innerHeight)
+    eraseSetUp(canvas.drawingContext)
     setupNoiseBrush();
 }
 
@@ -96,9 +101,14 @@ function draw(){
 
             noiseBrush( mouseX, mouseY )
 
+        } else if(currentBrush=="erase"){
+
+            erase( mouseX , mouseY)
+
         } else if (currentBrush=="djScrewBrush"){
 
             djScrewBrush( mouseX, mouseY )
+            
         } else if(currentBrush=="erase"){
 
             erase( mouseX , mouseY)
