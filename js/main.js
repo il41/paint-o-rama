@@ -60,6 +60,7 @@ function preload() {
     loadCatImages()
     loadMp3Sounds()
     loadCowboyImages()
+    loadacidhouseImages()
 }
 
 function setup(){
@@ -108,10 +109,11 @@ function draw(){
         } else if (currentBrush=="djScrewBrush"){
 
             djScrewBrush( mouseX, mouseY )
-            
-        } else if(currentBrush=="erase"){
 
-            erase( mouseX , mouseY)
+        } else if(currentBrush=="acidhouseBrush"){
+
+            acidhouseBrush( mouseX, mouseY )
+
         }
     }
 }
