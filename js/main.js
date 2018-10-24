@@ -42,6 +42,7 @@ function applyFilter(filterName){
     else if(filterName=="pinkparty"){
 
         pinkparty()
+
       }
 
 }
@@ -53,11 +54,16 @@ function applyFilter(filterName){
 function preload() {
     loadStarImage()
     loadCatImages()
+    loadCowboyImages()
 }
 
 function setup(){
     createCanvas(innerWidth,innerHeight)
     setupNoiseBrush();
+}
+
+function mouseReleased(){
+    cowboyEnd(); //when mouse is released the audio stops playing
 }
 
 function draw(){
@@ -81,10 +87,13 @@ function draw(){
 
             catsBrush( mouseX, mouseY )
 
+        } else if(currentBrush=="cowboyBrush"){
+
+            cowboyBrush( mouseX, mouseY )
+
         } else if(currentBrush=="noiseBrush"){
 
             noiseBrush( mouseX, mouseY )
-
         }
 
     }
