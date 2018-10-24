@@ -38,6 +38,10 @@ function applyFilter(filterName){
 
         invert()
 
+    } else if(filterName=="webcam"){
+
+        webcam()
+
     }
     else if(filterName=="pinkparty"){
 
