@@ -3,17 +3,21 @@ let lengthcap = false
 let sonifyloop = false
 
 
+const actx = new (window.AudioContext || window.webkitAudioContext)()
+const sonifycomp = actx.createDynamicsCompressor()
+sonifycomp.connect(actx.destination)
+
 let sonifyAlgo = "guitar"
-let slider = document.getElementById("pitchRange");
+let pitchslider = document.getElementById("pitchRange");
 let slideroutput = document.getElementById("sonifymenu");
 let pitch = 1; // initialize pitch value
-slider.oninput = function() {
+pitchslider.oninput = function() {
   pitch = this.value;
   return pitch;
 }
 
 
-function openSonify(){
+function toggleSonify(){
   let menu = document.querySelector("#sonifymenu")
   if(menu.style.display=="block"){
     menu.style.display="none"
@@ -42,13 +46,11 @@ document.querySelector("#sonifyplay").addEventListener("click",function(){
 //   console.log("hello")
 // })
 
-function sonify()
-{
+function sonify(){
   loadPixels()
-  const actx = new (window.AudioContext || window.webkitAudioContext)()
+
   let buffer = actx.createBuffer(2, pixels.length, actx.sampleRate)
-  for (let ch=0; ch<buffer.numberOfChannels; ch++)
-  {
+  for (let ch=0; ch<buffer.numberOfChannels; ch++){
     let samples = buffer.getChannelData(ch)
       if(sonifyAlgo == "guitar"){
         guitar(samples,pixels)
@@ -62,22 +64,20 @@ function sonify()
   let noise = actx.createBufferSource()
   // then we'll replace it's buffer with the one we made above
   noise.buffer = buffer
+  noise.connect(sonifycomp)
   // then just like before we need to connect it to it's destination
-  noise.connect(actx.destination)
   // && lastly we start playing the sound
-  if(sonifyloop==true)
-  {
+  if(sonifyloop==true){
     noise.loop=true
   } else {
     noise.loop=false
   }
 
-  noise.start()
   noise.playbackRate.value=pitch
+  noise.start()
   // here is to determine the sound's length based on user input
   if(lengthcap=true){
-    if(pitch<1)
-    {
+    if(pitch<1){
       noise.stop(actx.currentTime + length);
     }
   }

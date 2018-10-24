@@ -40,7 +40,7 @@ function applyFilter(filterName){
 
     } else if(filterName=="sonify"){
 
-        openSonify()
+        toggleSonify()
 
     } else if(filterName=="webcam"){
 
