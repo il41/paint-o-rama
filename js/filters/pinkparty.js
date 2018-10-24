@@ -17,7 +17,5 @@ function pinkparty(){
   updatePixels() // update canvas from modified "pixels" array
   pop() // restore original drawing settings
 }
-<<<<<<< HEAD
 // yee haw!
-=======
->>>>>>> 7ec4040f14f1046bf1f8818b051b5faa41ecb985
+// woo hoo!
