@@ -58,6 +58,7 @@ function applyFilter(filterName){
 function preload() {
     loadStarImage()
     loadCatImages()
+    loadMp3Sounds()
     loadCowboyImages()
 }
 
@@ -99,6 +100,15 @@ function draw(){
         } else if(currentBrush=="noiseBrush"){
 
             noiseBrush( mouseX, mouseY )
+
+        } else if(currentBrush=="erase"){
+
+            erase( mouseX , mouseY)
+
+        } else if (currentBrush=="djScrewBrush"){
+
+            djScrewBrush( mouseX, mouseY )
+            
         } else if(currentBrush=="erase"){
 
             erase( mouseX , mouseY)
